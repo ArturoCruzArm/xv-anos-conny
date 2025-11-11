@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XV Años - Shelyn Guadalupe Herrera Reynoso</title>
+    <meta name="description" content="Invitación a los XV años de Shelyn Guadalupe - 25 de abril de 2026">
+    <meta name="theme-color" content="#6a1b9a">
+    <title>XV Años - Shelyn Guadalupe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -11,343 +17,603 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --purple: #6a1b9a;
+            --purple-light: #9c4dcc;
+            --purple-dark: #4a148c;
+            --lilac: #c8a2d0;
+            --lilac-light: #e1bee7;
+            --lilac-dark: #ab47bc;
+            --cream: #faf8f3;
+            --white: #ffffff;
+        }
+
         body {
-            font-family: 'Georgia', serif;
-            background: linear-gradient(135deg, #ffeef8 0%, #fff5f7 100%);
-            color: #333;
+            font-family: 'Lato', sans-serif;
+            background: linear-gradient(135deg, var(--purple-dark) 0%, var(--purple) 50%, var(--purple-light) 100%);
+            color: var(--cream);
             overflow-x: hidden;
+            line-height: 1.6;
         }
 
+        /* Ornamental Background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                radial-gradient(circle at 20% 20%, rgba(200, 162, 208, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(200, 162, 208, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Container */
         .container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
         }
 
+        /* Header with Crown */
         header {
             text-align: center;
-            padding: 60px 20px;
-            background: linear-gradient(135deg, #9b59b6 0%, #c8a2d0 100%);
-            color: white;
-            border-radius: 20px;
-            margin-bottom: 40px;
-            box-shadow: 0 10px 30px rgba(155, 89, 182, 0.3);
-            animation: fadeIn 1s ease-in;
+            padding: 60px 20px 40px;
+            position: relative;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
+        .crown {
+            font-size: 4rem;
+            animation: float 3s ease-in-out infinite;
+            display: inline-block;
+            filter: drop-shadow(0 0 20px var(--lilac));
         }
 
-        h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
-            font-weight: normal;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
         }
 
-        .subtitle {
-            font-size: 1.5em;
-            font-style: italic;
-            opacity: 0.95;
-        }
-
-        .section {
-            background: white;
-            padding: 40px;
-            margin-bottom: 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            animation: slideUp 0.8s ease-out;
-        }
-
-        @keyframes slideUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .section h2 {
-            color: #9b59b6;
-            margin-bottom: 20px;
-            font-size: 2em;
-            text-align: center;
-            border-bottom: 2px solid #c8a2d0;
-            padding-bottom: 10px;
-        }
-
-        .date-info {
-            text-align: center;
-            font-size: 1.3em;
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 8vw, 4rem);
+            font-weight: 900;
+            color: var(--lilac);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
             margin: 20px 0;
-            color: #666;
+            letter-spacing: 8px;
         }
 
-        .date-info strong {
-            color: #9b59b6;
-            font-size: 1.2em;
-            display: block;
-            margin-top: 10px;
-        }
-
-        .countdown {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
+        .quinceañera-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(3rem, 10vw, 6rem);
+            font-weight: 700;
+            color: var(--lilac-light);
+            text-shadow: 0 4px 20px rgba(200, 162, 208, 0.6);
             margin: 30px 0;
-            flex-wrap: wrap;
+            line-height: 1.2;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 4px 20px rgba(200, 162, 208, 0.6); }
+            to { text-shadow: 0 4px 40px rgba(200, 162, 208, 0.9); }
+        }
+
+        /* Decorative Divider */
+        .divider {
+            width: 200px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--lilac), transparent);
+            margin: 30px auto;
+            position: relative;
+        }
+
+        .divider::before {
+            content: '❖';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--purple);
+            color: var(--lilac);
+            font-size: 1.5rem;
+            padding: 0 10px;
+        }
+
+        /* Section Styling */
+        section {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px 30px;
+            margin: 30px 0;
+            border: 1px solid rgba(200, 162, 208, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            animation: fadeUp 0.8s ease-out;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            color: var(--lilac);
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 2px;
+            background: var(--lilac);
+        }
+
+        /* Quote Section */
+        .quote {
+            text-align: center;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
+            font-style: italic;
+            color: var(--lilac-light);
+            margin: 40px 0;
+            padding: 30px;
+            border-left: 3px solid var(--lilac);
+            border-right: 3px solid var(--lilac);
+        }
+
+        /* Parents & Godparents */
+        .family-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .family-card {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid rgba(200, 162, 208, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .family-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(200, 162, 208, 0.2);
+        }
+
+        .family-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            filter: drop-shadow(0 0 10px var(--lilac));
+        }
+
+        .family-role {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--lilac);
+            margin-bottom: 15px;
+        }
+
+        .family-names {
+            font-size: 1.1rem;
+            color: var(--cream);
+            line-height: 1.8;
+        }
+
+        /* Event Details */
+        .event-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .event-card {
+            background: linear-gradient(135deg, rgba(200, 162, 208, 0.1), rgba(200, 162, 208, 0.05));
+            border-radius: 15px;
+            padding: 30px;
+            border: 2px solid var(--lilac);
+            text-align: center;
+        }
+
+        .event-icon {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .event-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--lilac);
+            margin-bottom: 20px;
+        }
+
+        .event-info {
+            color: var(--cream);
+            margin: 10px 0;
+            font-size: 1.1rem;
+        }
+
+        .event-info strong {
+            color: var(--lilac-light);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* Countdown Timer */
+        .countdown {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin: 40px 0;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .countdown-item {
-            background: linear-gradient(135deg, #9b59b6 0%, #c8a2d0 100%);
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            min-width: 80px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 25px 15px;
             text-align: center;
-            box-shadow: 0 4px 10px rgba(155, 89, 182, 0.3);
+            border: 2px solid var(--lilac);
         }
 
-        .countdown-number {
-            font-size: 2.5em;
-            font-weight: bold;
+        .countdown-value {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            color: var(--lilac-light);
             display: block;
         }
 
         .countdown-label {
-            font-size: 0.9em;
-            opacity: 0.9;
+            font-size: 0.9rem;
+            color: var(--cream);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 5px;
         }
 
-        .event-details {
-            display: grid;
-            gap: 25px;
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            margin: 10px;
+            background: linear-gradient(135deg, var(--lilac), var(--lilac-dark));
+            color: var(--purple-dark);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(200, 162, 208, 0.4);
+        }
+
+        .btn:hover {
+            background: linear-gradient(135deg, var(--lilac-light), var(--lilac));
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(200, 162, 208, 0.6);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--lilac);
+            color: var(--lilac);
+        }
+
+        .btn-secondary:hover {
+            background: var(--lilac);
+            color: var(--purple-dark);
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
+        }
+
+        .btn-whatsapp:hover {
+            background: #20BA5A;
+        }
+
+        /* Dress Code */
+        .dress-code {
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(135deg, rgba(200, 162, 208, 0.2), rgba(200, 162, 208, 0.1));
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+
+        .dress-code-icons {
+            font-size: 4rem;
             margin: 20px 0;
         }
 
-        .event-card {
-            background: #fef5f9;
-            padding: 25px;
-            border-radius: 12px;
-            border-left: 4px solid #9b59b6;
+        .dress-code-text {
+            font-size: 1.3rem;
+            color: var(--lilac-light);
+            font-weight: 600;
         }
 
-        .event-card h3 {
-            color: #9b59b6;
-            margin-bottom: 15px;
-            font-size: 1.5em;
-        }
-
-        .event-card p {
-            margin: 8px 0;
-            color: #555;
-            line-height: 1.6;
-        }
-
-        .icon {
-            margin-right: 8px;
-        }
-
-        .map-button {
-            display: inline-block;
-            background: #9b59b6;
-            color: white;
-            padding: 12px 30px;
-            text-decoration: none;
-            border-radius: 25px;
-            margin-top: 15px;
-            transition: all 0.3s;
-            font-weight: bold;
-        }
-
-        .map-button:hover {
-            background: #7d3c98;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(155, 89, 182, 0.4);
-        }
-
-        .confirm-section {
-            text-align: center;
-            padding: 40px;
-        }
-
-        .whatsapp-button {
-            display: inline-block;
-            background: #25D366;
-            color: white;
-            padding: 18px 40px;
-            text-decoration: none;
-            border-radius: 30px;
-            font-size: 1.2em;
-            font-weight: bold;
-            transition: all 0.3s;
-            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
-        }
-
-        .whatsapp-button:hover {
-            background: #20BA5A;
-            transform: scale(1.05);
-            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
-        }
-
-        .divider {
-            height: 2px;
-            background: linear-gradient(to right, transparent, #c8a2d0, transparent);
-            margin: 40px 0;
-        }
-
-        .family-section {
-            text-align: center;
-            font-style: italic;
-            color: #666;
-            line-height: 1.8;
-        }
-
+        /* Footer */
         footer {
             text-align: center;
-            padding: 30px;
-            color: #999;
-            font-size: 0.9em;
+            padding: 40px 20px;
+            margin-top: 60px;
+            border-top: 2px solid rgba(200, 162, 208, 0.3);
         }
 
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 2em;
+        footer p {
+            color: var(--lilac);
+            margin: 10px 0;
+        }
+
+        /* Floating Flowers Animation */
+        .floating-flower {
+            position: fixed;
+            font-size: 2rem;
+            opacity: 0.3;
+            pointer-events: none;
+            animation: floatFlower 15s infinite ease-in-out;
+        }
+
+        @keyframes floatFlower {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
             }
-            .subtitle {
-                font-size: 1.2em;
+            10% {
+                opacity: 0.3;
             }
-            .section {
-                padding: 25px;
+            90% {
+                opacity: 0.3;
             }
-            .countdown-item {
-                min-width: 70px;
-                padding: 15px;
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
             }
-            .countdown-number {
-                font-size: 2em;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .countdown {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .event-details {
+                grid-template-columns: 1fr;
+            }
+
+            .family-section {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 30px 20px;
+            }
+
+            .btn {
+                padding: 12px 30px;
+                font-size: 0.9rem;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Floating Flowers -->
+    <div class="floating-flower" style="left: 10%; animation-delay: 0s;">❀</div>
+    <div class="floating-flower" style="left: 30%; animation-delay: 3s;">✿</div>
+    <div class="floating-flower" style="left: 50%; animation-delay: 6s;">❁</div>
+    <div class="floating-flower" style="left: 70%; animation-delay: 9s;">❀</div>
+    <div class="floating-flower" style="left: 90%; animation-delay: 12s;">✿</div>
+
     <div class="container">
+        <!-- Header -->
         <header>
-            <h1>Shelyn Guadalupe</h1>
-            <p class="subtitle">Mis XV Años</p>
+            <div class="crown"><i class="fas fa-crown"></i></div>
+            <h1 class="main-title">MIS XV AÑOS</h1>
+            <h2 class="quinceañera-name">Shelyn Guadalupe<br>Herrera Reynoso</h2>
+            <div class="divider"></div>
         </header>
 
-        <div class="section">
-            <h2>¡Te invito a celebrar conmigo!</h2>
-            <div class="date-info">
-                <p>Con la bendición de Dios y mi madre</p>
-                <p><strong>María Concepción Reynoso Cuevas</strong></p>
-                <div class="divider"></div>
-                <p>Te invito a celebrar mis quince años</p>
-                <strong>Sábado, 25 de Abril de 2026</strong>
-            </div>
+        <!-- Quote -->
+        <div class="quote">
+            "Hoy comienza un nuevo capítulo lleno de sueños, ilusiones y magia. <br>
+            Gracias por acompañarme en este día tan especial."
         </div>
 
-        <div class="section">
-            <h2>Cuenta Regresiva</h2>
+        <!-- Countdown -->
+        <section>
+            <h2 class="section-title"><i class="fas fa-clock"></i> Cuenta Regresiva</h2>
             <div class="countdown" id="countdown">
                 <div class="countdown-item">
-                    <span class="countdown-number" id="days">0</span>
+                    <span class="countdown-value" id="days">00</span>
                     <span class="countdown-label">Días</span>
                 </div>
                 <div class="countdown-item">
-                    <span class="countdown-number" id="hours">0</span>
+                    <span class="countdown-value" id="hours">00</span>
                     <span class="countdown-label">Horas</span>
                 </div>
                 <div class="countdown-item">
-                    <span class="countdown-number" id="minutes">0</span>
+                    <span class="countdown-value" id="minutes">00</span>
                     <span class="countdown-label">Minutos</span>
                 </div>
                 <div class="countdown-item">
-                    <span class="countdown-number" id="seconds">0</span>
+                    <span class="countdown-value" id="seconds">00</span>
                     <span class="countdown-label">Segundos</span>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="section">
-            <h2>Detalles del Evento</h2>
-            <div class="event-details">
-                <div class="event-card">
-                    <h3>⛪ Ceremonia Religiosa</h3>
-                    <p><span class="icon">📅</span><strong>Fecha:</strong> Sábado, 25 de Abril de 2026</p>
-                    <p><span class="icon">🕐</span><strong>Hora:</strong> 5:00 PM</p>
-                    <p><span class="icon">📍</span><strong>Lugar:</strong> Parroquia de Nuestra Señora Santa María Madre Dolorosa</p>
-                    <p>Blvd. Obrero Mundial 606, Sta Rita de los Naranjos, 37440 León de los Aldama, Gto.</p>
-                    <a href="https://maps.app.goo.gl/2PK1Pf662zRyfLmQ7" class="map-button" target="_blank">📍 Ver en Mapa</a>
+        <!-- Family -->
+        <section>
+            <h2 class="section-title"><i class="fas fa-users"></i> Mi Familia</h2>
+            <div class="family-section">
+                <div class="family-card">
+                    <div class="family-icon"><i class="fas fa-home"></i></div>
+                    <div class="family-role">Mi Madre</div>
+                    <div class="family-names">
+                        María Concepción Reynoso Cuevas
+                    </div>
                 </div>
-
-                <div class="event-card">
-                    <h3>🎉 Recepción</h3>
-                    <p><span class="icon">📅</span><strong>Fecha:</strong> Sábado, 25 de Abril de 2026</p>
-                    <p><span class="icon">🕐</span><strong>Hora:</strong> 7:00 PM</p>
-                    <p><span class="icon">📍</span><strong>Lugar:</strong> Salón El Portal</p>
-                    <p>Arco del Triunfo 102, Portales de San Sebastian, 37448 León de los Aldama, Gto.</p>
-                    <a href="https://maps.app.goo.gl/yVbqwivrCS9NJxdF6" class="map-button" target="_blank">📍 Ver en Mapa</a>
+                <div class="family-card">
+                    <div class="family-icon"><i class="fas fa-heart"></i></div>
+                    <div class="family-role">Mis Padrinos</div>
+                    <div class="family-names">
+                        Mili Reynoso<br>
+                        Juan López
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="section">
-            <h2>👗 Código de Vestimenta</h2>
-            <p style="text-align: center; font-size: 1.2em; color: #666;">
-                Formal<br>
-                <span style="color: #9b59b6; font-weight: bold;">Color reservado: Lila</span>
+        <!-- Event Details -->
+        <section>
+            <h2 class="section-title"><i class="fas fa-map-marker-alt"></i> Detalles del Evento</h2>
+            <div class="event-details">
+                <!-- Ceremony -->
+                <div class="event-card">
+                    <span class="event-icon"><i class="fas fa-church"></i></span>
+                    <h3 class="event-title">Ceremonia</h3>
+                    <div class="event-info">
+                        <strong><i class="fas fa-calendar-alt"></i> Fecha</strong>
+                        Sábado, 25 de Abril de 2026
+                    </div>
+                    <div class="event-info">
+                        <strong><i class="fas fa-clock"></i> Hora</strong>
+                        17:00 hrs
+                    </div>
+                    <div class="event-info">
+                        <strong><i class="fas fa-map-marker-alt"></i> Lugar</strong>
+                        Parroquia de Nuestra Señora Santa María Madre Dolorosa<br>
+                        Blvd. Obrero Mundial 606<br>
+                        Sta Rita de los Naranjos, 37440 León, Gto.
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <a href="https://maps.app.goo.gl/2PK1Pf662zRyfLmQ7" target="_blank" class="btn"><i class="fas fa-map-marked-alt"></i> Ver Mapa</a>
+                    </div>
+                </div>
+
+                <!-- Reception -->
+                <div class="event-card">
+                    <span class="event-icon"><i class="fas fa-glass-cheers"></i></span>
+                    <h3 class="event-title">Recepción</h3>
+                    <div class="event-info">
+                        <strong><i class="fas fa-calendar-alt"></i> Fecha</strong>
+                        Sábado, 25 de Abril de 2026
+                    </div>
+                    <div class="event-info">
+                        <strong><i class="fas fa-clock"></i> Hora</strong>
+                        19:00 hrs
+                    </div>
+                    <div class="event-info">
+                        <strong><i class="fas fa-map-marker-alt"></i> Lugar</strong>
+                        Salón El Portal<br>
+                        Arco del Triunfo 102<br>
+                        Portales de San Sebastian, 37448 León, Gto.
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <a href="https://maps.app.goo.gl/yVbqwivrCS9NJxdF6" target="_blank" class="btn"><i class="fas fa-map-marked-alt"></i> Ver Mapa</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dress Code -->
+        <section>
+            <h2 class="section-title"><i class="fas fa-tshirt"></i> Código de Vestimenta</h2>
+            <div class="dress-code">
+                <div class="dress-code-icons"><i class="fas fa-user-tie"></i> <i class="fas fa-female"></i></div>
+                <p class="dress-code-text">FORMAL / ELEGANTE</p>
+                <p style="margin-top: 15px; font-size: 1rem; color: var(--cream);">
+                    Te pedimos asistir con vestimenta formal para hacer de esta noche una ocasión aún más especial
+                </p>
+                <p style="margin-top: 15px; font-size: 1.1rem; color: var(--lilac-light); font-weight: bold;">
+                    Color reservado: Lila
+                </p>
+            </div>
+        </section>
+
+        <!-- RSVP -->
+        <section style="text-align: center;">
+            <h2 class="section-title"><i class="fas fa-envelope"></i> Confirma tu Asistencia</h2>
+            <p style="margin-bottom: 30px; color: var(--cream);">
+                Tu presencia es muy importante para mí.<br>
+                Por favor confirma tu asistencia por WhatsApp
             </p>
-        </div>
-
-        <div class="section family-section">
-            <h2>Padrinos</h2>
-            <p>Mili Reynoso y Juan López</p>
-        </div>
-
-        <div class="section confirm-section">
-            <h2>Confirma tu Asistencia</h2>
-            <p style="margin: 20px 0; color: #666;">
-                Tu presencia es muy importante para mí
-            </p>
-            <a href="https://wa.me/524775640349?text=Hola%2C%20confirmo%20mi%20asistencia%20a%20los%20XV%20a%C3%B1os%20de%20Shelyn%20Guadalupe"
-               class="whatsapp-button" target="_blank">
-                💬 Confirmar por WhatsApp
+            <a href="https://wa.me/524775640349?text=Hola%2C%20confirmo%20mi%20asistencia%20a%20los%20XV%20a%C3%B1os%20de%20Shelyn%20Guadalupe%20el%2025%20de%20abril%20de%202026"
+               target="_blank"
+               class="btn btn-whatsapp">
+                <i class="fab fa-whatsapp"></i> Confirmar por WhatsApp
             </a>
-        </div>
+        </section>
 
+        <!-- Footer -->
         <footer>
+            <p style="font-size: 1.2rem; margin-bottom: 15px;"><i class="fas fa-sparkles"></i> ¡Nos vemos el 25 de abril! <i class="fas fa-sparkles"></i></p>
+            <div class="divider" style="margin: 20px auto;"></div>
             <p>Con cariño, Shelyn Guadalupe</p>
-            <p style="margin-top: 20px;">✨ 25 de Abril de 2026 ✨</p>
+            <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.7;">
+                ✨ 25 de Abril de 2026 ✨
+            </p>
         </footer>
     </div>
 
     <script>
-        // Countdown timer
-        const eventDate = new Date('April 25, 2026 17:00:00').getTime();
-
+        // Countdown Timer
         function updateCountdown() {
+            // Fecha del evento: 25 de abril de 2026 a las 17:00 hrs
+            const eventDate = new Date(2026, 3, 25, 17, 0, 0).getTime(); // Mes 3 = Abril (0-indexed)
             const now = new Date().getTime();
             const distance = eventDate - now;
+
+            if (distance < 0) {
+                document.getElementById('countdown').innerHTML = '<p style="text-align: center; font-size: 1.5rem; color: var(--lilac);">¡El evento ya comenzó! 🎉</p>';
+                return;
+            }
 
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            document.getElementById('days').textContent = days;
-            document.getElementById('hours').textContent = hours;
-            document.getElementById('minutes').textContent = minutes;
-            document.getElementById('seconds').textContent = seconds;
-
-            if (distance < 0) {
-                clearInterval(countdownInterval);
-                document.querySelector('.countdown').innerHTML = '<p style="font-size: 2em; color: #9b59b6;">¡El evento ha comenzado!</p>';
-            }
+            document.getElementById('days').textContent = String(days).padStart(2, '0');
+            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
         }
 
-        const countdownInterval = setInterval(updateCountdown, 1000);
+        setInterval(updateCountdown, 1000);
         updateCountdown();
     </script>
 </body>
