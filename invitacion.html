@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XV Años - [NOMBRE DE LA QUINCEAÑERA]</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #ffeef8 0%, #fff5f7 100%);
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #d4508c 0%, #e899c1 100%);
+            color: white;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(212, 80, 140, 0.3);
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            font-weight: normal;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .subtitle {
+            font-size: 1.5em;
+            font-style: italic;
+            opacity: 0.95;
+        }
+
+        .section {
+            background: white;
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            animation: slideUp 0.8s ease-out;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section h2 {
+            color: #d4508c;
+            margin-bottom: 20px;
+            font-size: 2em;
+            text-align: center;
+            border-bottom: 2px solid #e899c1;
+            padding-bottom: 10px;
+        }
+
+        .date-info {
+            text-align: center;
+            font-size: 1.3em;
+            margin: 20px 0;
+            color: #666;
+        }
+
+        .date-info strong {
+            color: #d4508c;
+            font-size: 1.2em;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .countdown-item {
+            background: linear-gradient(135deg, #d4508c 0%, #e899c1 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            min-width: 80px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(212, 80, 140, 0.3);
+        }
+
+        .countdown-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            display: block;
+        }
+
+        .countdown-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+
+        .event-details {
+            display: grid;
+            gap: 25px;
+            margin: 20px 0;
+        }
+
+        .event-card {
+            background: #fef5f9;
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid #d4508c;
+        }
+
+        .event-card h3 {
+            color: #d4508c;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .event-card p {
+            margin: 8px 0;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .icon {
+            margin-right: 8px;
+        }
+
+        .map-button {
+            display: inline-block;
+            background: #d4508c;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            margin-top: 15px;
+            transition: all 0.3s;
+            font-weight: bold;
+        }
+
+        .map-button:hover {
+            background: #b93d72;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(212, 80, 140, 0.4);
+        }
+
+        .confirm-section {
+            text-align: center;
+            padding: 40px;
+        }
+
+        .whatsapp-button {
+            display: inline-block;
+            background: #25D366;
+            color: white;
+            padding: 18px 40px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .whatsapp-button:hover {
+            background: #20BA5A;
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        .divider {
+            height: 2px;
+            background: linear-gradient(to right, transparent, #e899c1, transparent);
+            margin: 40px 0;
+        }
+
+        .family-section {
+            text-align: center;
+            font-style: italic;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #999;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+            .subtitle {
+                font-size: 1.2em;
+            }
+            .section {
+                padding: 25px;
+            }
+            .countdown-item {
+                min-width: 70px;
+                padding: 15px;
+            }
+            .countdown-number {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>[NOMBRE DE LA QUINCEAÑERA]</h1>
+            <p class="subtitle">Mis XV Años</p>
+        </header>
+
+        <div class="section">
+            <h2>¡Te invito a celebrar conmigo!</h2>
+            <div class="date-info">
+                <p>Con la bendición de Dios y mis padres</p>
+                <p><strong>[NOMBRES DE LOS PADRES]</strong></p>
+                <div class="divider"></div>
+                <p>Te invito a celebrar mis quince años</p>
+                <strong>Sábado, 25 de Abril de 2026</strong>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Cuenta Regresiva</h2>
+            <div class="countdown" id="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">0</span>
+                    <span class="countdown-label">Días</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">0</span>
+                    <span class="countdown-label">Horas</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">0</span>
+                    <span class="countdown-label">Minutos</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">0</span>
+                    <span class="countdown-label">Segundos</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Detalles del Evento</h2>
+            <div class="event-details">
+                <div class="event-card">
+                    <h3>⛪ Ceremonia Religiosa</h3>
+                    <p><span class="icon">📅</span><strong>Fecha:</strong> Sábado, 25 de Abril de 2026</p>
+                    <p><span class="icon">🕐</span><strong>Hora:</strong> [HORA DE LA MISA]</p>
+                    <p><span class="icon">📍</span><strong>Lugar:</strong> Parroquia de Nuestra Señora de los Dolores</p>
+                    <p>[DIRECCIÓN COMPLETA DE LA PARROQUIA]</p>
+                    <a href="[ENLACE GOOGLE MAPS PARROQUIA]" class="map-button" target="_blank">📍 Ver en Mapa</a>
+                </div>
+
+                <div class="event-card">
+                    <h3>🎉 Recepción</h3>
+                    <p><span class="icon">📅</span><strong>Fecha:</strong> Sábado, 25 de Abril de 2026</p>
+                    <p><span class="icon">🕐</span><strong>Hora:</strong> [HORA DE LA RECEPCIÓN]</p>
+                    <p><span class="icon">📍</span><strong>Lugar:</strong> Salón El Portal</p>
+                    <p>[DIRECCIÓN COMPLETA DEL SALÓN EL PORTAL]</p>
+                    <a href="[ENLACE GOOGLE MAPS SALÓN]" class="map-button" target="_blank">📍 Ver en Mapa</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>👗 Código de Vestimenta</h2>
+            <p style="text-align: center; font-size: 1.2em; color: #666;">
+                [CÓDIGO DE VESTIMENTA - Ej: Formal, Semi-formal, Colores reservados: Rosa]
+            </p>
+        </div>
+
+        <div class="section family-section">
+            <h2>Padrinos</h2>
+            <p>[NOMBRES DE LOS PADRINOS]</p>
+        </div>
+
+        <div class="section confirm-section">
+            <h2>Confirma tu Asistencia</h2>
+            <p style="margin: 20px 0; color: #666;">
+                Tu presencia es muy importante para mí
+            </p>
+            <a href="https://wa.me/524775640349?text=Hola%2C%20confirmo%20mi%20asistencia%20a%20los%20XV%20a%C3%B1os%20de%20[NOMBRE]"
+               class="whatsapp-button" target="_blank">
+                💬 Confirmar por WhatsApp
+            </a>
+        </div>
+
+        <footer>
+            <p>Con cariño, [NOMBRE DE LA QUINCEAÑERA]</p>
+            <p style="margin-top: 20px;">✨ 25 de Abril de 2026 ✨</p>
+        </footer>
+    </div>
+
+    <script>
+        // Countdown timer
+        const eventDate = new Date('April 25, 2026 [HORA DE LA MISA]').getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+            document.getElementById('seconds').textContent = seconds;
+
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                document.querySelector('.countdown').innerHTML = '<p style="font-size: 2em; color: #d4508c;">¡El evento ha comenzado!</p>';
+            }
+        }
+
+        const countdownInterval = setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+</body>
+</html>

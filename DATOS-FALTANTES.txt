@@ -1,0 +1,126 @@
+═══════════════════════════════════════════════════════════════════
+    DATOS FALTANTES PARA INVITACIÓN WEB Y CONTRATO
+    XV Años - 25 de Abril de 2026
+═══════════════════════════════════════════════════════════════════
+
+📋 INFORMACIÓN DE LA QUINCEAÑERA
+═══════════════════════════════════════════════════════════════════
+[ ] Nombre completo de la quinceañera
+    (Para invitación y contrato)
+
+
+👨‍👩‍👧 INFORMACIÓN FAMILIAR
+═══════════════════════════════════════════════════════════════════
+[ ] Nombre completo de la mamá (Conny - nombre completo legal)
+    (Para contrato - actualmente solo tenemos "Conny")
+
+[ ] Nombres completos de los padres
+    (Para invitación - "Con la bendición de Dios y mis padres...")
+
+[ ] Nombres completos de los padrinos
+    (Para invitación)
+
+
+⛪ CEREMONIA RELIGIOSA
+═══════════════════════════════════════════════════════════════════
+[ ] Hora exacta de la misa
+    Lugar: Parroquia de Nuestra Señora de los Dolores
+
+[ ] Dirección completa de la parroquia
+    (Calle, número, colonia, código postal, León, Gto.)
+
+[ ] Enlace de Google Maps de la parroquia
+    (Para botón "Ver en Mapa")
+
+
+🎉 RECEPCIÓN
+═══════════════════════════════════════════════════════════════════
+[ ] Hora exacta de inicio de la recepción
+    Lugar: Salón El Portal
+
+[ ] Dirección completa del Salón El Portal
+    (Calle, número, colonia, código postal, León, Gto.)
+
+[ ] Enlace de Google Maps del salón
+    (Para botón "Ver en Mapa")
+
+
+👗 CÓDIGO DE VESTIMENTA
+═══════════════════════════════════════════════════════════════════
+[ ] Código de vestimenta
+    Opciones comunes:
+    - Formal
+    - Semi-formal
+    - Etiqueta rigurosa
+    - Casual elegante
+
+[ ] Colores reservados (si aplica)
+    Ejemplo: "Color reservado para la quinceañera: Rosa"
+
+
+📸 SESIÓN FOTOGRÁFICA PREVIA
+═══════════════════════════════════════════════════════════════════
+[ ] Fecha de la sesión previa
+    (Sugerida: Sábado 18 de Abril de 2026 - una semana antes)
+
+[ ] Hora de la sesión previa
+    Ubicaciones: La Calzada y Templo Expiatorio
+
+
+📞 DATOS DE CONTACTO DEL FOTÓGRAFO
+═══════════════════════════════════════════════════════════════════
+[ ] Teléfono de Arturo Cruz
+    (Para contrato)
+
+[ ] Correo electrónico de Arturo Cruz
+    (Para contrato)
+
+
+📄 DETALLES DEL CONTRATO
+═══════════════════════════════════════════════════════════════════
+[ ] Tiempo de entrega de productos
+    (Sugerido: 30 días después del evento)
+    Productos: Fotolibro, ampliación, USB con archivos
+
+[ ] Tiempo de respaldo de archivos originales
+    (Sugerido: 6 meses después de la entrega)
+
+[ ] Fecha de firma del contrato
+    (Día, mes y año)
+
+
+═══════════════════════════════════════════════════════════════════
+    INSTRUCCIONES
+═══════════════════════════════════════════════════════════════════
+
+1. Una vez que tengas TODOS estos datos, deberás reemplazar los textos
+   marcados con [CORCHETES] y resaltados en AMARILLO en los archivos:
+
+   - invitacion.html
+   - contrato-fotografia.html
+
+2. Los archivos están listos para usarse, solo faltan estos datos.
+
+3. Para la invitación web:
+   - Puedes obtener enlaces de Google Maps buscando las direcciones
+     en Google Maps y copiando el enlace para compartir.
+
+4. Para el contrato:
+   - Asegúrate de usar nombres COMPLETOS y LEGALES
+   - Verifica las fechas y horarios
+   - Lee todo el contrato antes de firmar
+
+═══════════════════════════════════════════════════════════════════
+
+DATOS QUE YA TENEMOS:
+✓ Fecha del evento: Sábado, 25 de Abril de 2026
+✓ Salón: El Portal
+✓ Iglesia: Parroquia de Nuestra Señora de los Dolores
+✓ Cliente: Conny (cuevasconny7@gmail.com, +52 1 477 564 0349)
+✓ Domicilio: Obrero Mundial 610, Col. Cumbres de la Piscina, León, Gto.
+✓ Paquete: Fotolibro - $8,500 MXN
+✓ Anticipo: $1,000 MXN
+✓ Liquidación: $7,500 MXN (8 días antes = 17 de Abril de 2026)
+✓ Sesión previa en: La Calzada y Templo Expiatorio
+
+═══════════════════════════════════════════════════════════════════
